@@ -295,90 +295,69 @@ export default function Home() {
           <span>Hindi • Hinglish • English • Step-by-step guidance</span>
         </div>
 
-        {/* Unified AI Command Capsule */}
-        <div className="mt-5 sm:mt-6 w-full max-w-2xl text-left">
-          <div className="bg-white rounded-3xl border border-black/[0.08] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.09),0_1px_3px_rgba(0,0,0,0.05)] transition-all duration-300 overflow-hidden">
-            
-            {/* Header Strip inside Capsule */}
-            <div className="px-5 sm:px-6 pt-4 pb-2 flex items-center justify-between border-b border-black/[0.03]">
-              <div className="flex items-center gap-2">
-                <div className="w-5 h-5 rounded-md bg-neutral-950 flex items-center justify-center text-white shrink-0">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-3 h-3 text-white">
-                    <path d="M12 3v3m0 12v3M3 12h3m12 0h3m-2.6-6.4l-2.1 2.1m-8.6 8.6l-2.1 2.1m0-12.8l2.1 2.1m8.6 8.6l2.1 2.1" />
-                  </svg>
-                </div>
-                <span className="text-xs font-bold text-neutral-950 tracking-tight">
-                  Aapke mind me kya hai?
-                </span>
-                <span className="hidden sm:inline-block text-[11px] font-medium text-neutral-400">
-                  • AI Business Navigator
-                </span>
-              </div>
+        {/* Ultra-Smooth Minimal AI Search Pill */}
+        <div className="mt-5 sm:mt-6 w-full max-w-2xl mx-auto">
+          {/* Label */}
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-semibold text-neutral-800 tracking-tight">
+              Aapke mind me kya hai?
+            </span>
+            <span className="text-neutral-300">•</span>
+            <span className="text-[11px] text-neutral-400">Ask in Hindi, English or Hinglish</span>
+          </div>
 
-              <div className="flex items-center gap-1.5 text-[11px] font-medium text-neutral-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Instant Roadmap Ready</span>
-              </div>
-            </div>
-
-            {/* Seamless Main Input Row */}
-            <form onSubmit={handleFormSubmit} className="p-3 sm:p-4 flex items-center gap-3">
-              <div className="pl-3 text-neutral-400 shrink-0">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-neutral-400">
-                  <circle cx="9" cy="9" r="6" />
-                  <path d="m14 14 4 4" />
-                </svg>
-              </div>
-
-              <input
-                id="ai-input"
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={animatedText ? `“${animatedText}”` : "Type your business idea or question..."}
-                className="w-full py-2.5 text-sm sm:text-base bg-transparent border-0 text-neutral-950 placeholder:text-neutral-400 focus:outline-none focus:ring-0 font-normal"
-              />
-
-              <button
-                type="submit"
-                className="shrink-0 inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm font-semibold px-5 py-3 rounded-2xl transition-all active:scale-95 cursor-pointer shadow-sm"
+          {/* Unified Floating Pill */}
+          <form
+            onSubmit={handleFormSubmit}
+            className="group relative flex items-center bg-white rounded-full border border-black/[0.08] p-1.5 pl-4 sm:pl-5 shadow-[0_12px_40px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.03)] hover:border-black/20 hover:shadow-[0_16px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
+          >
+            <div className="text-neutral-400 shrink-0 mr-3">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="w-4 h-4 text-neutral-400 group-focus-within:text-neutral-900 transition-colors"
               >
-                <span>Get Plan</span>
-                <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5 stroke-current stroke-2">
-                  <path d="M6 3l5 5-5 5" />
-                </svg>
-              </button>
-            </form>
-
-            {/* Bottom Quick Suggestion Shelf */}
-            <div className="px-4 sm:px-6 py-2.5 bg-neutral-50/70 border-t border-black/[0.04] flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
-              <div className="flex items-center gap-1.5 shrink-0 text-neutral-400 pl-1">
-                <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 text-neutral-400">
-                  <path d="M9.5 1.5a1.5 1.5 0 0 0-2.3-1.28A6.98 6.98 0 0 0 4 6c0 1.25.33 2.42.91 3.44A3.5 3.5 0 0 1 8 8a3.5 3.5 0 0 1 3.09 1.44A6.98 6.98 0 0 0 12 6c0-2.15-1-4.07-2.5-4.5z" />
-                </svg>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                  Trending:
-                </span>
-              </div>
-
-              <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                {quickCategories.map((item) => (
-                  <button
-                    key={item.title}
-                    type="button"
-                    onClick={() => handlePromptSelect(item.query)}
-                    className="group inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-neutral-100/80 border border-black/[0.07] hover:border-black/20 text-neutral-800 hover:text-neutral-950 text-xs transition-all shadow-2xs hover:shadow-xs cursor-pointer select-none"
-                  >
-                    <span className="shrink-0 flex items-center justify-center">{item.renderIcon()}</span>
-                    <span className="font-semibold text-neutral-900 text-xs tracking-tight">{item.title}</span>
-                    <span className="text-[10px] font-medium text-neutral-500 bg-neutral-100 group-hover:bg-neutral-200/80 px-1.5 py-0.2 rounded-md transition-colors">
-                      {item.badge}
-                    </span>
-                  </button>
-                ))}
-              </div>
+                <circle cx="9" cy="9" r="6" />
+                <path d="m14 14 4 4" />
+              </svg>
             </div>
 
+            <input
+              id="ai-input"
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={animatedText ? `“${animatedText}”` : "Type your business idea or question..."}
+              className="w-full text-xs sm:text-sm bg-transparent border-0 text-neutral-950 placeholder:text-neutral-400 focus:outline-none focus:ring-0 font-normal py-1.5"
+            />
+
+            <button
+              type="submit"
+              className="shrink-0 inline-flex items-center gap-1.5 bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition-all active:scale-95 cursor-pointer shadow-xs ml-2"
+            >
+              <span>Get Plan</span>
+              <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5 stroke-current stroke-2">
+                <path d="M6 3l5 5-5 5" />
+              </svg>
+            </button>
+          </form>
+
+          {/* Understated Minimal Suggestion Chips */}
+          <div className="mt-2.5 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-xs">
+            <span className="text-[11px] font-medium text-neutral-400">Trending:</span>
+            {quickCategories.map((item) => (
+              <button
+                key={item.title}
+                type="button"
+                onClick={() => handlePromptSelect(item.query)}
+                className="px-2.5 py-0.5 rounded-full bg-neutral-100 hover:bg-neutral-200/80 hover:text-neutral-950 text-neutral-600 text-[11px] font-medium transition-all cursor-pointer border border-transparent hover:border-black/[0.06]"
+              >
+                {item.title}
+              </button>
+            ))}
           </div>
         </div>
       </section>

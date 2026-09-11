@@ -241,13 +241,13 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center">
       
-      {/* 1. HERO SECTION */}
-      <section className="relative pt-12 sm:pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
+      {/* 1. HERO SECTION (Vertically Centered in Viewport) */}
+      <section className="relative min-h-[calc(100vh-4.5rem)] py-6 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col items-center justify-center text-center">
         {/* Soft Ambient Radial Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[480px] bg-gradient-to-b from-neutral-100/60 via-neutral-50/30 to-transparent blur-3xl -z-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[480px] bg-gradient-to-b from-neutral-100/60 via-neutral-50/30 to-transparent blur-3xl -z-10 pointer-events-none" />
 
         {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 bg-neutral-50 border border-neutral-200/80 px-4 py-1.5 rounded-full text-xs font-semibold text-neutral-800 shadow-2xs mb-7 hover:border-neutral-300 transition-colors">
+        <div className="inline-flex items-center gap-2 bg-neutral-50 border border-neutral-200/80 px-3.5 py-1 rounded-full text-xs font-semibold text-neutral-800 shadow-2xs mb-3 hover:border-neutral-300 transition-colors">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="tracking-tight">India ka smart business guide</span>
           <span className="text-neutral-300">•</span>
@@ -255,13 +255,13 @@ export default function Home() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.035em] text-neutral-950 max-w-4xl leading-[1.08]">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.035em] text-neutral-950 max-w-4xl leading-[1.1]">
           Idea se business tak. <br />
           <span className="text-neutral-400">Business se growth tak.</span>
         </h1>
 
         {/* Subheading */}
-        <p className="mt-6 text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed font-normal">
+        <p className="mt-3 text-sm sm:text-base text-neutral-600 max-w-2xl leading-relaxed font-normal">
           Prarambh aapko simple steps me batata hai ki{" "}
           <span className="font-semibold text-neutral-900">
             kya karna hai, kya chahiye, aur next best step kya hai
@@ -270,10 +270,10 @@ export default function Home() {
         </p>
 
         {/* Dual CTAs */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
+        <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
           <Link
             href="/guide"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white font-semibold text-sm px-7 py-3.5 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all active:translate-y-0 cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-neutral-950 hover:bg-neutral-800 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all active:translate-y-0 cursor-pointer"
           >
             <span>Start with your idea</span>
             <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 stroke-current stroke-2">
@@ -283,20 +283,20 @@ export default function Home() {
 
           <Link
             href="/schemes"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 border border-neutral-200/90 text-neutral-800 font-semibold text-sm px-7 py-3.5 rounded-full shadow-2xs hover:shadow-xs transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 border border-neutral-200/90 text-neutral-800 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full shadow-2xs hover:shadow-xs transition-all cursor-pointer"
           >
             <span>I already run a business</span>
           </Link>
         </div>
 
         {/* Small Trust Line */}
-        <div className="mt-5 flex items-center justify-center gap-2 text-xs font-medium text-neutral-500">
+        <div className="mt-3 flex items-center justify-center gap-2 text-[11px] font-medium text-neutral-500">
           <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
           <span>Hindi • Hinglish • English • Step-by-step guidance</span>
         </div>
 
         {/* Unified AI Command Capsule */}
-        <div className="mt-10 w-full max-w-3xl text-left">
+        <div className="mt-5 sm:mt-6 w-full max-w-2xl text-left">
           <div className="bg-white rounded-3xl border border-black/[0.08] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.09),0_1px_3px_rgba(0,0,0,0.05)] transition-all duration-300 overflow-hidden">
             
             {/* Header Strip inside Capsule */}
